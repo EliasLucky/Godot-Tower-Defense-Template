@@ -18,7 +18,7 @@ Do NOT change bullet settings directly from `bullet.gd`. Settings such as `speed
 
 If you want to change these properties then go to the turret and change these properties in there.
 
-Additionally, you can create custom turret class and apply custom logic on your bullets.
+Additionally, you can create custom turret class and apply custom logic on your bullets. See [turret_classes_structure.md](turret_classes_structure.md) for more information.
 
 - `speed` (float) The speed of bulet
 - `damage` (float) Damage that will be given to the enemy to which the bullet has reached
