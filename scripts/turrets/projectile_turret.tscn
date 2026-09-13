@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ceo44f3u14hlm"]
+
+[ext_resource type="PackedScene" uid="uid://dm0ma0yl2e310" path="res://scripts/turrets/turret.tscn" id="1_p0ore"]
+[ext_resource type="Script" uid="uid://bv21mv2mfwawg" path="res://scripts/turrets/projectile_turret.gd" id="1_vqoen"]
+
+[node name="turret" unique_id=505394040 instance=ExtResource("1_p0ore")]
+script = ExtResource("1_vqoen")
+projectile = null
+bullet_speed = 200.0
+bullet_pierce = 1

@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://mu7e5njocef4"]
+
+[ext_resource type="Script" uid="uid://og5yicobpx3" path="res://scripts/level.gd" id="1_g2h75"]
+[ext_resource type="PackedScene" uid="uid://dlw0dg2r4aoux" path="res://scripts/enemies/resources/example_enemy.tscn" id="2_dwgg1"]
+[ext_resource type="Script" uid="uid://dmu6no1n6hehj" path="res://scripts/finish_base.gd" id="3_dwgg1"]
+[ext_resource type="Script" uid="uid://bii5ae6konqn" path="res://scripts/placeable.gd" id="3_m7ahb"]
+
+[sub_resource type="Gradient" id="Gradient_m7ahb"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.6431373, 0.6313726, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dwgg1"]
+gradient = SubResource("Gradient_m7ahb")
+width = 1280
+height = 720
+
+[sub_resource type="Gradient" id="Gradient_dwgg1"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1.8049032e-07, 0.2892447, 0.28344357, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ru4tf"]
+gradient = SubResource("Gradient_dwgg1")
+width = 50
+height = 50
+
+[sub_resource type="Gradient" id="Gradient_bbk5w"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.2901961, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ejswk"]
+gradient = SubResource("Gradient_bbk5w")
+
+[sub_resource type="Gradient" id="Gradient_6sh32"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bbk5w"]
+gradient = SubResource("Gradient_6sh32")
+width = 100
+height = 20
+
+[sub_resource type="Gradient" id="Gradient_conm7"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 1, 0.28235295, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6sh32"]
+gradient = SubResource("Gradient_conm7")
+width = 10
+height = 15
+
+[sub_resource type="Curve2D" id="Curve2D_m7ahb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -675, 244, 0, 0, 0, 0, -196, 242, 0, 0, 0, 0, -192, -175, 0, 0, 0, 0, 227, -185, 0, 0, 0, 0, 231, -37, 0, 0, 0, 0, 465, -45)
+}
+point_count = 6
+
+[node name="map" type="Node2D" unique_id=1999270850]
+script = ExtResource("1_g2h75")
+enemies = Array[PackedScene]([ExtResource("2_dwgg1")])
+
+[node name="background" type="Sprite2D" parent="." unique_id=503625333]
+texture = SubResource("GradientTexture2D_dwgg1")
+
+[node name="background2" type="Sprite2D" parent="background" unique_id=1677300632]
+position = Vector2(-437, 246)
+scale = Vector2(10.28, 1)
+texture = SubResource("GradientTexture2D_ru4tf")
+
+[node name="background4" type="Sprite2D" parent="background" unique_id=16269289]
+position = Vector2(333, -35)
+scale = Vector2(5.0599995, 1)
+texture = SubResource("GradientTexture2D_ru4tf")
+
+[node name="background5" type="Sprite2D" parent="background" unique_id=784772861]
+position = Vector2(23.000025, -179)
+scale = Vector2(9.200001, 1)
+texture = SubResource("GradientTexture2D_ru4tf")
+
+[node name="background3" type="Sprite2D" parent="background" unique_id=1751559908]
+position = Vector2(-190, 34)
+scale = Vector2(1, 9.5)
+texture = SubResource("GradientTexture2D_ru4tf")
+
+[node name="background6" type="Sprite2D" parent="background" unique_id=1952304761]
+position = Vector2(231, -106.75)
+scale = Vector2(1, 3.83)
+texture = SubResource("GradientTexture2D_ru4tf")
+
+[node name="finish_base" type="Sprite2D" parent="." unique_id=320427120]
+position = Vector2(471, -36)
+texture = SubResource("GradientTexture2D_ejswk")
+script = ExtResource("3_dwgg1")
+
+[node name="health" type="TextureRect" parent="finish_base" unique_id=493398104]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = 8.0
+offset_right = 18.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_bbk5w")
+
+[node name="bars" type="HBoxContainer" parent="finish_base/health" unique_id=451033512]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -7.5
+offset_right = 47.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" type="TextureRect" parent="finish_base/health/bars" unique_id=79788913]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_6sh32")
+
+[node name="2" type="TextureRect" parent="finish_base/health/bars" unique_id=1476350542]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_6sh32")
+
+[node name="3" type="TextureRect" parent="finish_base/health/bars" unique_id=1191765972]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_6sh32")
+
+[node name="4" type="TextureRect" parent="finish_base/health/bars" unique_id=935400912]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_6sh32")
+
+[node name="5" type="TextureRect" parent="finish_base/health/bars" unique_id=903854905]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_6sh32")
+
+[node name="6" type="TextureRect" parent="finish_base/health/bars" unique_id=939767829]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_6sh32")
+
+[node name="7" type="TextureRect" parent="finish_base/health/bars" unique_id=879090686]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_6sh32")
+
+[node name="PathSpawner" type="Path2D" parent="." unique_id=685243729]
+curve = SubResource("Curve2D_m7ahb")
+
+[node name="timer_spawn_delay" type="Timer" parent="PathSpawner" unique_id=1048431701]
+wait_time = 2.0
+one_shot = true
+
+[node name="timer_wave_delay" type="Timer" parent="PathSpawner" unique_id=408227599]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="turrets" type="Node2D" parent="." unique_id=711877886]
+
+[node name="projectiles" type="Node2D" parent="." unique_id=1151036296]
+
+[node name="obstacles" type="Area2D" parent="." unique_id=1662900474]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("3_m7ahb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles" unique_id=465993233]
+polygon = PackedVector2Array(-162, -147, 196, -146, 195, -4, 518, -6, 514, -78, 269, -76, 260, -211, -224, -211, -226, 213, -665, 208, -663, -392, 637, -394, 639, 425, -682, 395, -684, 275, -154, 278)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1323022180]

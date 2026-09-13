@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dlw0dg2r4aoux"]
+
+[ext_resource type="PackedScene" uid="uid://cb3v7e6vydle1" path="res://scripts/enemies/enemy.tscn" id="1_niuv5"]
+
+[sub_resource type="Gradient" id="Gradient_niuv5"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gy2yn"]
+gradient = SubResource("Gradient_niuv5")
+width = 32
+height = 32
+
+[node name="EnemyMover" unique_id=1999413986 instance=ExtResource("1_niuv5")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=52529169]
+texture = SubResource("GradientTexture2D_gy2yn")

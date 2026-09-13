@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cs6fs5icr287d"]
+
+[ext_resource type="PackedScene" uid="uid://ceo44f3u14hlm" path="res://scripts/turrets/projectile_turret.tscn" id="1_iej6j"]
+[ext_resource type="PackedScene" uid="uid://c511kx2fuxds7" path="res://scripts/turrets/bullet/resources/example_bullet.tscn" id="2_vdgmv"]
+[ext_resource type="Resource" uid="uid://cu5w6rqx235h" path="res://scripts/turrets/upgrades/resources/example_projectile_turret_upgrade.tres" id="3_15rcu"]
+
+[node name="turret" unique_id=505394040 instance=ExtResource("1_iej6j")]
+projectile = ExtResource("2_vdgmv")
+turret_id = "turret"
+turret_name = "Turret"
+upgrade_data = ExtResource("3_15rcu")
+attack_range = 15.0

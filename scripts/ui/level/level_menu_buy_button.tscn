@@ -1,0 +1,319 @@
+[gd_scene format=3 uid="uid://t2tqb1egcivf"]
+
+[ext_resource type="Texture2D" uid="uid://de58wv8pew88b" path="res://assets/ui/PNG/Blue/Default/button_square_depth_flat.png" id="1_vhhl8"]
+[ext_resource type="Script" uid="uid://uchdundlh7cq" path="res://scripts/ui/level/level_menu_buy_button.gd" id="2_lmkuy"]
+[ext_resource type="Texture2D" uid="uid://s5eks1okev7i" path="res://assets/ui/PNG/Yellow/Default/button_square_depth_flat.png" id="3_ypdc6"]
+[ext_resource type="Texture2D" uid="uid://c0wk2s63kedvn" path="res://assets/ui/PNG/Green/Default/button_square_depth_border.png" id="4_cwxbg"]
+[ext_resource type="Texture2D" uid="uid://cvt48s8grbw2k" path="res://assets/ui/gems1.png" id="5_iei4t"]
+[ext_resource type="Texture2D" uid="uid://hd3hofgv47aj" path="res://assets/ui/money1.png" id="6_3xvac"]
+[ext_resource type="Texture2D" uid="uid://gm4kn0f0lt4q" path="res://assets/ui/gems2.png" id="6_cwxbg"]
+[ext_resource type="Texture2D" uid="uid://byom2rdq68rqf" path="res://assets/ui/gems3.png" id="7_cwxbg"]
+[ext_resource type="Texture2D" uid="uid://bvabc2o7q85lr" path="res://assets/ui/money2.png" id="7_iei4t"]
+[ext_resource type="Texture2D" uid="uid://bmv6h8tdqkixp" path="res://assets/ui/PNG/Green/Default/button_rectangle_depth_flat.png" id="7_vhhl8"]
+[ext_resource type="Texture2D" uid="uid://i5pwrtvumrdh" path="res://assets/ui/money3.png" id="8_cwxbg"]
+[ext_resource type="Texture2D" uid="uid://cb8rdgt56l0f3" path="res://assets/ui/PNG/Green/Default/check_round_grey_circle.png" id="12_nwel3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lmkuy"]
+font_size = 45
+font_color = Color(0, 0, 0, 1)
+outline_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_ooeb0"]
+font_size = 40
+
+[sub_resource type="Gradient" id="Gradient_qh7jb"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.31764707)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ce81k"]
+gradient = SubResource("Gradient_qh7jb")
+width = 145
+height = 145
+
+[node name="NinePatchRect3" type="NinePatchRect" unique_id=2054999662 node_paths=PackedStringArray("gem_base", "gem_manager", "gem_ceo", "money_base", "money_manager", "money_ceo")]
+custom_minimum_size = Vector2(150, 150)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_vhhl8")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+script = ExtResource("2_lmkuy")
+free_texture = ExtResource("1_vhhl8")
+manager_texture = ExtResource("3_ypdc6")
+ceo_texture = ExtResource("4_cwxbg")
+gem_base = NodePath("gem_base")
+gem_manager = NodePath("gem_manager")
+gem_ceo = NodePath("gem_ceo")
+money_base = NodePath("money_base")
+money_manager = NodePath("money_manager")
+money_ceo = NodePath("money_ceo")
+
+[node name="gem_base" type="Control" parent="." unique_id=1308221838]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="gem_base" type="TextureRect" parent="gem_base" unique_id=949236398]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -110.0
+offset_right = 100.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_iei4t")
+expand_mode = 1
+
+[node name="gem_manager" type="Control" parent="." unique_id=118856466]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="gem_base4" type="TextureRect" parent="gem_manager" unique_id=1381832489]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -110.0
+offset_right = 100.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_cwxbg")
+expand_mode = 1
+
+[node name="gem_ceo" type="Control" parent="." unique_id=1371641164]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="gem_base4" type="TextureRect" parent="gem_ceo" unique_id=206671771]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -90.0
+offset_right = 90.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_cwxbg")
+expand_mode = 1
+
+[node name="money_base" type="Control" parent="." unique_id=1691149297]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="gem_base" type="TextureRect" parent="money_base" unique_id=1860771986]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -70.0
+offset_right = 60.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_3xvac")
+expand_mode = 1
+
+[node name="money_manager" type="Control" parent="." unique_id=867533132]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="gem_base" type="TextureRect" parent="money_manager" unique_id=2036579839]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -70.0
+offset_right = 60.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_iei4t")
+expand_mode = 1
+
+[node name="money_ceo" type="Control" parent="." unique_id=1488388305]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="gem_base" type="TextureRect" parent="money_ceo" unique_id=435437925]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -70.0
+offset_right = 60.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_cwxbg")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=428760254]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+label_settings = SubResource("LabelSettings_lmkuy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=339577744]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -55.0
+offset_right = 96.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+pivot_offset_ratio = Vector2(0.5, 1.7)
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("7_vhhl8")
+
+[node name="Label" type="Label" parent="TextureButton" unique_id=462067422]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "GET"
+label_settings = SubResource("LabelSettings_ooeb0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Checked" type="TextureRect" parent="." unique_id=1259836742]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.5
+offset_top = -72.5
+offset_right = 72.5
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ce81k")
+
+[node name="Checked" type="TextureButton" parent="Checked" unique_id=1262760030]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("12_nwel3")
+stretch_mode = 0

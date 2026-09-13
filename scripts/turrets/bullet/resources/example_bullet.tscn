@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c511kx2fuxds7"]
+
+[ext_resource type="PackedScene" uid="uid://cw8dl6kw77qmf" path="res://scripts/turrets/bullet/bullet.tscn" id="1_54y86"]
+
+[sub_resource type="Gradient" id="Gradient_qam7t"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.95686275, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_te7pe"]
+gradient = SubResource("Gradient_qam7t")
+width = 16
+height = 16
+
+[node name="bullet" unique_id=1864146895 instance=ExtResource("1_54y86")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=2062209249]
+texture = SubResource("GradientTexture2D_te7pe")

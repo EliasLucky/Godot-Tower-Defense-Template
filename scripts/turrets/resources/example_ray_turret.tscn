@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bvpv2r1h6gftj"]
+
+[ext_resource type="PackedScene" uid="uid://bkkfw8fxxsff7" path="res://scripts/turrets/ray_turret.tscn" id="1_hvrg0"]
+[ext_resource type="Shader" uid="uid://dqpfimqcdp5pc" path="res://shaders/laser.gdshader" id="2_6oq4d"]
+[ext_resource type="Resource" uid="uid://bbfw45fk1otop" path="res://scripts/turrets/upgrades/resources/example_ray_turret_upgrade.tres" id="3_6oq4d"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6cxu8"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_atx7l"]
+noise = SubResource("FastNoiseLite_6cxu8")
+seamless = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ufoqv"]
+seed = 2
+frequency = 0.0094
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xayqg"]
+noise = SubResource("FastNoiseLite_ufoqv")
+seamless = true
+invert = true
+seamless_blend_skirt = 0.459
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3lsgh"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kd7ay"]
+noise = SubResource("FastNoiseLite_3lsgh")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8cy3n"]
+shader = ExtResource("2_6oq4d")
+shader_parameter/NOISE_PATTERN1 = SubResource("NoiseTexture2D_atx7l")
+shader_parameter/NOISE_PATTERN2 = SubResource("NoiseTexture2D_xayqg")
+shader_parameter/scroll1 = Vector2(1, 0.4)
+shader_parameter/scroll2 = Vector2(0.2, 2)
+shader_parameter/speed = 0.342
+shader_parameter/xStretch = 1.0
+shader_parameter/yStretch = 0.1
+shader_parameter/laserSize = 0.814
+shader_parameter/wobbliness = 0.084
+shader_parameter/color1 = Color(1, 0, 0, 1)
+shader_parameter/color2 = Color(1, 0.588235, 0, 1)
+shader_parameter/colorMixFactor = 3.528
+shader_parameter/glowFactor = 3.0
+shader_parameter/TRANSPARENCY_VARIATION = SubResource("NoiseTexture2D_kd7ay")
+shader_parameter/minAlpha = 0.5
+
+[node name="turret" unique_id=505394040 instance=ExtResource("1_hvrg0")]
+laser_material = SubResource("ShaderMaterial_8cy3n")
+turret_id = "laser_turret"
+turret_name = "Laser Turret"
+upgrade_data = ExtResource("3_6oq4d")
+attack_range = 10.0

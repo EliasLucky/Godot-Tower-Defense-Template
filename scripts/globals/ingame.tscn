@@ -1,0 +1,833 @@
+[gd_scene format=3 uid="uid://xex2dfj047q1"]
+
+[ext_resource type="Script" uid="uid://xgncwu18820a" path="res://scripts/globals/canvas_layer.gd" id="1_pemro"]
+[ext_resource type="Script" uid="uid://xhayigkvmrpk" path="res://scripts/ui/game_won_menu.gd" id="2_ynnro"]
+[ext_resource type="Script" uid="uid://44q7xo8ctqcg" path="res://scripts/ui/game_over_menu.gd" id="3_p0ou2"]
+[ext_resource type="Script" uid="uid://iprx2r82yiii" path="res://scripts/turrets/turret_buy_menu.gd" id="4_kdxh0"]
+[ext_resource type="Script" uid="uid://4t860q15kihc" path="res://scripts/turrets/turret_buy.gd" id="5_is8vs"]
+[ext_resource type="PackedScene" uid="uid://cs6fs5icr287d" path="res://scripts/turrets/resources/example_projectile_turret.tscn" id="6_is8vs"]
+[ext_resource type="PackedScene" uid="uid://bvpv2r1h6gftj" path="res://scripts/turrets/resources/example_ray_turret.tscn" id="7_cug0h"]
+[ext_resource type="Script" uid="uid://dyitxuo1tsarp" path="res://scripts/turrets/turret_details.gd" id="7_kdxh0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kdxh0"]
+font_size = 25
+
+[sub_resource type="Gradient" id="Gradient_idnrv"]
+offsets = PackedFloat32Array(0, 0.25974026, 0.6883117, 0.7012987)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j3ebu"]
+gradient = SubResource("Gradient_idnrv")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Gradient" id="Gradient_j3ebu"]
+offsets = PackedFloat32Array(0.25974026, 0.29220778, 0.6883117, 0.7012987)
+colors = PackedColorArray(0, 0, 0, 0, 0.9882353, 0, 0, 1, 0.94509804, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fdem5"]
+gradient = SubResource("Gradient_j3ebu")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Gradient" id="Gradient_ynnro"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.5411765)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p0ou2"]
+gradient = SubResource("Gradient_ynnro")
+
+[sub_resource type="Gradient" id="Gradient_xey5q"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lor1i"]
+gradient = SubResource("Gradient_xey5q")
+
+[sub_resource type="Gradient" id="Gradient_qj33b"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.21950102, 0.21950102, 0.21950102, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ynnro"]
+gradient = SubResource("Gradient_qj33b")
+
+[sub_resource type="Gradient" id="Gradient_p0ou2"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.5529556, 0.55295557, 0.55295557, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kdxh0"]
+gradient = SubResource("Gradient_p0ou2")
+
+[sub_resource type="Gradient" id="Gradient_lor1i"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.4351923, 0.43519226, 0.43519226, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p14te"]
+gradient = SubResource("Gradient_lor1i")
+width = 128
+
+[sub_resource type="Gradient" id="Gradient_j2ybm"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.3143162, 0.31431612, 0.31431586, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qj33b"]
+gradient = SubResource("Gradient_j2ybm")
+width = 128
+
+[sub_resource type="Gradient" id="Gradient_p14te"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j2ybm"]
+gradient = SubResource("Gradient_p14te")
+width = 256
+height = 256
+
+[sub_resource type="Gradient" id="Gradient_is8vs"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cug0h"]
+gradient = SubResource("Gradient_is8vs")
+
+[sub_resource type="Gradient" id="Gradient_cug0h"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.27752772, 0.27752772, 0.27752772, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_idnrv"]
+gradient = SubResource("Gradient_cug0h")
+
+[sub_resource type="Gradient" id="Gradient_kdxh0"]
+offsets = PackedFloat32Array(0, 0.48051947, 0.52597404, 0.77272725, 0.8051948)
+colors = PackedColorArray(1, 1, 1, 1, 0.75974023, 0.75974023, 0.75974023, 1, 0, 0, 0, 1, 0.18181813, 0.18181813, 0.18181813, 1, 0.59717613, 0.59717613, 0.5971761, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_is8vs"]
+gradient = SubResource("Gradient_kdxh0")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1152632827]
+script = ExtResource("1_pemro")
+
+[node name="MarginContainer5" type="MarginContainer" parent="." unique_id=117123198]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 90.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer5" unique_id=921019816]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 10
+
+[node name="money" type="NinePatchRect" parent="MarginContainer5/VBoxContainer" unique_id=1819722077]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="Label" type="Label" parent="MarginContainer5/VBoxContainer/money" unique_id=954558349]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_right = 30.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_kdxh0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer5/VBoxContainer/money" unique_id=914801581]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -50.0
+offset_right = 60.0
+offset_bottom = 50.0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer5/VBoxContainer/money/TextureRect2" unique_id=1682240469]
+layout_mode = 0
+offset_top = -1016.0
+offset_right = 656.0
+offset_bottom = -971.0
+theme_override_font_sizes/font_size = 32
+text = "Example Level #1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="gems" type="NinePatchRect" parent="MarginContainer5/VBoxContainer" unique_id=1704843060]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="Label" type="Label" parent="MarginContainer5/VBoxContainer/gems" unique_id=1222528551]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_right = 30.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_kdxh0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer5/VBoxContainer/gems" unique_id=815950733]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -50.0
+offset_right = 60.0
+offset_bottom = 50.0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer5/VBoxContainer/gems/TextureRect2" unique_id=59284085]
+layout_mode = 0
+offset_top = -1016.0
+offset_right = 656.0
+offset_bottom = -971.0
+theme_override_font_sizes/font_size = 32
+text = "Example Level #1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer5" unique_id=1215871924]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="shop" type="Control" parent="MarginContainer5/VBoxContainer3" unique_id=1812674622]
+custom_minimum_size = Vector2(150, 130)
+layout_mode = 2
+
+[node name="button" type="TextureButton" parent="MarginContainer5/VBoxContainer3/shop" unique_id=2069329850]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 256.0
+scale = Vector2(0.5, 0.5)
+
+[node name="noads" type="Control" parent="MarginContainer5/VBoxContainer3" unique_id=1389231028]
+custom_minimum_size = Vector2(150, 130)
+layout_mode = 2
+
+[node name="button" type="TextureButton" parent="MarginContainer5/VBoxContainer3/noads" unique_id=1614574557]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 0
+offset_left = 15.0
+offset_right = 271.0
+offset_bottom = 256.0
+scale = Vector2(0.4, 0.4)
+
+[node name="Control" type="Control" parent="MarginContainer5" unique_id=128591259]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer5/Control" unique_id=636406119]
+layout_mode = 1
+offset_right = 80.0
+offset_bottom = 80.0
+step = 0.1
+fill_mode = 4
+texture_under = SubResource("GradientTexture2D_j3ebu")
+texture_progress = SubResource("GradientTexture2D_fdem5")
+
+[node name="Label" type="Label" parent="MarginContainer5/Control" unique_id=415764833]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 210.0
+offset_bottom = 35.0
+text = "Waves: 0/7"
+label_settings = SubResource("LabelSettings_kdxh0")
+
+[node name="ad_break_timer" type="Timer" parent="." unique_id=481028786]
+one_shot = true
+
+[node name="popup_timer" type="Timer" parent="." unique_id=434481183]
+one_shot = true
+
+[node name="shadow" type="NinePatchRect" parent="." unique_id=1360186441]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_p0ou2")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="game_won" type="Control" parent="." unique_id=1877906811]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("2_ynnro")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="game_won" unique_id=692538635]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_lor1i")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="Label" type="Label" parent="game_won" unique_id=1797309284]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.0
+offset_right = 232.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "GAME WON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="game_won" unique_id=1388013724]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="reward" type="NinePatchRect" parent="game_won/VBoxContainer" unique_id=962409011]
+custom_minimum_size = Vector2(320, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("GradientTexture2D_ynnro")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="game_won/VBoxContainer/reward" unique_id=1379849502]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="game_won/VBoxContainer/reward/HBoxContainer" unique_id=783995073]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "+20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="icon" type="Control" parent="game_won/VBoxContainer/reward/HBoxContainer" unique_id=657540942]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="game_won/VBoxContainer/reward/HBoxContainer/icon" unique_id=1191140508]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("GradientTexture2D_kdxh0")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Control" type="HBoxContainer" parent="game_won" unique_id=1015615262]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -80.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="retry" type="TextureButton" parent="game_won/Control" unique_id=1791455540]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = SubResource("GradientTexture2D_p14te")
+texture_pressed = SubResource("GradientTexture2D_qj33b")
+
+[node name="Label" type="Label" parent="game_won/Control/retry" unique_id=1761165150]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "RETRY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="continue" type="TextureButton" parent="game_won/Control" unique_id=188053094]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = SubResource("GradientTexture2D_p14te")
+texture_pressed = SubResource("GradientTexture2D_qj33b")
+
+[node name="Label" type="Label" parent="game_won/Control/continue" unique_id=518717431]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "CONTINUE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="game_over" type="Control" parent="." unique_id=1634775442]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -225.0
+offset_right = 250.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("3_p0ou2")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="game_over" unique_id=1387928200]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_j2ybm")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="Label" type="Label" parent="game_over" unique_id=1993846913]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.0
+offset_right = 232.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="stats" type="VBoxContainer" parent="game_over" unique_id=611074899]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -107.5
+offset_bottom = 107.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="wave_reached" type="Label" parent="game_over/stats" unique_id=1759150731]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Wave reached:"
+vertical_alignment = 1
+
+[node name="max_waves" type="Label" parent="game_over/stats" unique_id=1432141822]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Max waves:"
+vertical_alignment = 1
+
+[node name="total_killed" type="Label" parent="game_over/stats" unique_id=403426407]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Total killed enemies:"
+vertical_alignment = 1
+
+[node name="Control" type="HBoxContainer" parent="game_over" unique_id=426331202]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -80.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="menu" type="TextureButton" parent="game_over/Control" unique_id=1189324811]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = SubResource("GradientTexture2D_p14te")
+texture_pressed = SubResource("GradientTexture2D_qj33b")
+
+[node name="Label" type="Label" parent="game_over/Control/menu" unique_id=414863318]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="retry" type="TextureButton" parent="game_over/Control" unique_id=1608131199]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = SubResource("GradientTexture2D_p14te")
+texture_pressed = SubResource("GradientTexture2D_qj33b")
+
+[node name="Label" type="Label" parent="game_over/Control/retry" unique_id=771399184]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "RETRY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="place_turret" type="Control" parent="." unique_id=154609862]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -225.0
+offset_right = 250.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("4_kdxh0")
+
+[node name="turret1" type="TextureButton" parent="place_turret" unique_id=1215444864]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("GradientTexture2D_cug0h")
+texture_disabled = SubResource("GradientTexture2D_idnrv")
+stretch_mode = 5
+script = ExtResource("5_is8vs")
+turret = ExtResource("6_is8vs")
+turret_name = "Turret"
+price = 30
+
+[node name="turret4" type="TextureButton" parent="place_turret/turret1" unique_id=1343798412]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("GradientTexture2D_is8vs")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="place_turret/turret1" unique_id=370747986]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "30"
+
+[node name="turret2" type="TextureButton" parent="place_turret" unique_id=1359181504]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -40.0
+offset_right = 120.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("GradientTexture2D_is8vs")
+texture_disabled = SubResource("GradientTexture2D_idnrv")
+stretch_mode = 5
+script = ExtResource("5_is8vs")
+turret = ExtResource("7_cug0h")
+turret_name = "Laser Turret"
+price = 50
+
+[node name="Label" type="Label" parent="place_turret/turret2" unique_id=1048303413]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "70"
+
+[node name="turret3" type="TextureButton" parent="place_turret" unique_id=1007281996]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -120.0
+offset_right = 40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("GradientTexture2D_is8vs")
+texture_disabled = SubResource("GradientTexture2D_idnrv")
+stretch_mode = 5
+script = ExtResource("5_is8vs")
+
+[node name="Label" type="Label" parent="place_turret/turret3" unique_id=1817901449]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "70"
+
+[node name="turret_details" type="Control" parent="." unique_id=445743403]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -225.0
+offset_right = 250.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="turret_details" type="Control" parent="turret_details" unique_id=1582135494]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -225.0
+offset_right = 250.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("7_kdxh0")
+
+[node name="turret_name" type="Label" parent="turret_details/turret_details" unique_id=230052872]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = 55.0
+offset_right = 66.5
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "TURRET NAME"
+horizontal_alignment = 1
+
+[node name="turret_lvl" type="Label" parent="turret_details/turret_details" unique_id=1295067735]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = 75.0
+offset_right = 66.5
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "TURRET LEVEL: 1"
+horizontal_alignment = 1
+
+[node name="sell" type="TextureButton" parent="turret_details/turret_details" unique_id=143897064]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -40.0
+offset_right = 120.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("GradientTexture2D_is8vs")
+texture_disabled = SubResource("GradientTexture2D_idnrv")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="turret_details/turret_details/sell" unique_id=1956041141]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "SELL FOR 30"
+
+[node name="upgrade" type="TextureButton" parent="turret_details/turret_details" unique_id=399762761]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -120.0
+offset_right = 40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("GradientTexture2D_is8vs")
+texture_disabled = SubResource("GradientTexture2D_idnrv")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="turret_details/turret_details/upgrade" unique_id=2106334916]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "UPGRADE FOR 30"

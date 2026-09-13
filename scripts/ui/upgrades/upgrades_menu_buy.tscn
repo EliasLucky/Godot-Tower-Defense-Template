@@ -1,0 +1,305 @@
+[gd_scene format=3 uid="uid://c13xk4prx5hlp"]
+
+[ext_resource type="Texture2D" uid="uid://dwaj6orhjee1v" path="res://assets/ui/PNG/Blue/Default/button_square_depth_border_shop.png" id="1_c8nkl"]
+[ext_resource type="Script" uid="uid://btsv4axen6uc2" path="res://scripts/ui/upgrades/upgrades_menu_buy.gd" id="2_i1n06"]
+[ext_resource type="Texture2D" uid="uid://bcahdkeg40h8q" path="res://assets/ui/PNG/Green/Default/button_rectangle_depth_gloss.png" id="3_hgpt3"]
+[ext_resource type="Texture2D" uid="uid://c4l53hplj60r" path="res://assets/ui/PNG/Blue/Default/button_rectangle_depth_gloss.png" id="4_cr2id"]
+[ext_resource type="Texture2D" uid="uid://bxd175ne1vmdf" path="res://assets/ui/PNG/Grey/Double/arrow_basic_e_small.png" id="4_i1n06"]
+[ext_resource type="Texture2D" uid="uid://f8ll2va2sg6o" path="res://assets/ui/icons/speed.png" id="5_n2pho"]
+[ext_resource type="Texture2D" uid="uid://ch3daqceukkh5" path="res://assets/ui/icons/packages.png" id="6_0l6qu"]
+[ext_resource type="Texture2D" uid="uid://bibtx2tw2j15l" path="res://assets/ui/PNG/Green/Default/button_round_border.png" id="6_wtohx"]
+[ext_resource type="Texture2D" uid="uid://ch7ewb48uw361" path="res://assets/ui/PNG/Green/Double/icon_checkmark.png" id="7_8wgqd"]
+[ext_resource type="Texture2D" uid="uid://hd3hofgv47aj" path="res://assets/ui/money1.png" id="9_n2pho"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ccu6"]
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_ooeb0"]
+font_size = 40
+
+[sub_resource type="Gradient" id="Gradient_1sb4j"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.646029, 0.646029, 0.646029, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bcxbv"]
+gradient = SubResource("Gradient_1sb4j")
+width = 20
+height = 8
+
+[sub_resource type="Gradient" id="Gradient_n2pho"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.927235, 0.51937747, 0.37846488, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wtohx"]
+gradient = SubResource("Gradient_n2pho")
+width = 20
+height = 8
+
+[node name="NinePatchRect3" type="NinePatchRect" unique_id=2054999662 node_paths=PackedStringArray("label", "buy_label", "icon_speed", "icon_packages", "icon_money", "upgrade_bars", "filled_bar", "buy_btn", "ad_btn", "checked")]
+custom_minimum_size = Vector2(180, 300)
+offset_right = 220.0
+offset_bottom = 300.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_c8nkl")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+script = ExtResource("2_i1n06")
+label = NodePath("Label")
+buy_label = NodePath("buy/Label")
+icon_speed = NodePath("icon_speed")
+icon_packages = NodePath("icon_packages")
+icon_money = NodePath("icon_money")
+upgrade_bars = NodePath("Control/HBoxContainer")
+filled_bar = NodePath("Control/HBoxContainer/completed")
+buy_btn = NodePath("buy")
+ad_btn = NodePath("ad")
+checked = NodePath("Checked")
+free = null
+
+[node name="Label" type="Label" parent="." unique_id=428760254]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_top = 10.0
+offset_right = 68.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "MOVE SPEED"
+label_settings = SubResource("LabelSettings_3ccu6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="buy" type="TextureButton" parent="." unique_id=339577744]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -110.0
+offset_right = 96.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+pivot_offset_ratio = Vector2(0.5, 1.7)
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("3_hgpt3")
+
+[node name="Label" type="Label" parent="buy" unique_id=462067422]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "250$"
+label_settings = SubResource("LabelSettings_ooeb0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ad" type="TextureButton" parent="." unique_id=2043670431]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -180.0
+offset_right = 96.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+pivot_offset_ratio = Vector2(0.5, 1.7)
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("4_cr2id")
+
+[node name="Label" type="Label" parent="ad" unique_id=510415038]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "FREE"
+label_settings = SubResource("LabelSettings_ooeb0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ad" unique_id=2059656488]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -24.0
+offset_right = 58.0
+offset_bottom = 24.0
+grow_vertical = 2
+texture = ExtResource("4_i1n06")
+
+[node name="icon_speed" type="TextureButton" parent="." unique_id=1521543510]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -350.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+pivot_offset_ratio = Vector2(0.5, 0.48)
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("5_n2pho")
+
+[node name="icon_packages" type="TextureButton" parent="." unique_id=1157571472]
+visible = false
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -350.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+pivot_offset_ratio = Vector2(0.5, 0.48)
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("6_0l6qu")
+
+[node name="icon_money" type="TextureRect" parent="." unique_id=488289659]
+visible = false
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -130.0
+offset_right = 75.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture = ExtResource("9_n2pho")
+expand_mode = 1
+
+[node name="Checked" type="TextureButton" parent="." unique_id=1262760030]
+visible = false
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("6_wtohx")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="Checked" unique_id=1259836742]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -18.0
+offset_right = 20.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_8wgqd")
+
+[node name="Control" type="Control" parent="." unique_id=21604666]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -150.0
+offset_right = 20.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=2068105362]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -45.0
+offset_right = 50.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="1" type="TextureRect" parent="Control/HBoxContainer" unique_id=1244651543]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_bcxbv")
+
+[node name="completed" type="TextureRect" parent="Control/HBoxContainer" unique_id=1849549847]
+visible = false
+layout_mode = 2
+texture = SubResource("GradientTexture2D_wtohx")
+
+[node name="2" type="TextureRect" parent="Control/HBoxContainer" unique_id=285840192]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_bcxbv")
+
+[node name="3" type="TextureRect" parent="Control/HBoxContainer" unique_id=1981549926]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_bcxbv")
+
+[node name="4" type="TextureRect" parent="Control/HBoxContainer" unique_id=1675270610]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_bcxbv")
+
+[node name="5" type="TextureRect" parent="Control/HBoxContainer" unique_id=292138006]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_bcxbv")

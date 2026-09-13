@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cw8dl6kw77qmf"]
+
+[ext_resource type="Script" uid="uid://cugh7att12y5m" path="res://scripts/turrets/bullet/bullet.gd" id="1_n671s"]
+
+[sub_resource type="Gradient" id="Gradient_qam7t"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.95686275, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n671s"]
+gradient = SubResource("Gradient_qam7t")
+width = 16
+height = 16
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_govwh"]
+radius = 4.5
+
+[node name="bullet" type="Node2D" unique_id=1864146895]
+scale = Vector2(2, 2)
+script = ExtResource("1_n671s")
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="." unique_id=2062209249]
+texture = SubResource("GradientTexture2D_n671s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=696967681]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=881668571]
+shape = SubResource("CircleShape2D_govwh")
+
+[node name="disappear_timer" type="Timer" parent="." unique_id=212121786]
+wait_time = 20.0
+one_shot = true
+autostart = true

@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cb3v7e6vydle1"]
+
+[ext_resource type="Script" uid="uid://c3g1s1oqghamn" path="res://scripts/enemies/enemy.gd" id="1_s02gb"]
+
+[sub_resource type="Gradient" id="Gradient_3wboq"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_s02gb"]
+gradient = SubResource("Gradient_3wboq")
+width = 32
+height = 32
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7h0ns"]
+radius = 13.0
+
+[sub_resource type="Gradient" id="Gradient_ejswk"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i2su8"]
+gradient = SubResource("Gradient_ejswk")
+width = 100
+height = 20
+
+[sub_resource type="Gradient" id="Gradient_ru4tf"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 1, 0.28235295, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t5osk"]
+gradient = SubResource("Gradient_ru4tf")
+width = 10
+height = 15
+
+[node name="EnemyMover" type="PathFollow2D" unique_id=1999413986]
+rotates = false
+loop = false
+script = ExtResource("1_s02gb")
+health = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=52529169]
+texture = SubResource("GradientTexture2D_s02gb")
+
+[node name="Area" type="Area2D" parent="." unique_id=542479533]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area" unique_id=1242102316]
+shape = SubResource("CircleShape2D_7h0ns")
+
+[node name="health" type="Control" parent="." unique_id=122281827]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="background" type="TextureRect" parent="health" unique_id=563507894]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -10.0
+offset_right = 50.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_i2su8")
+expand_mode = 1
+
+[node name="bars" type="HBoxContainer" parent="health" unique_id=237115734]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -7.5
+offset_right = 47.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bar" type="TextureRect" parent="health/bars" unique_id=944009934]
+visible = false
+layout_mode = 2
+texture = SubResource("GradientTexture2D_t5osk")
