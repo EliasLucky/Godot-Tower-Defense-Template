@@ -13,6 +13,8 @@ There are currently two turret types (but can easily be added more):
 
 Turrets can give damage effects to enemies by using `.tres` resource `DamageEffect`.
 
+![Preview of the Projectile Turret](./docs/images/preview.gif)
+
 ## Quickstart
 
 - Clone the repository
