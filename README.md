@@ -2,7 +2,16 @@
 
 ## Overview
 
-Godot Engine Tower Defense template project. Made with scalability in mind. Towers can give damage effects.
+Godot Engine Tower Defense template project. Made with scalability in mind.
+
+Towers can easily be customized. Towers can have custom logic without rewriting whole project.
+
+This project uses OOP and Resources for modular hierarchy.
+There are currently two turret types (but can easily be added more):
+- `projectile_turret.tscn` (Projectile Turret)
+- `ray_turret.tscn` (Ray or Laser Turret)
+
+Turrets can give damage effects to enemies by using `.tres` resource `DamageEffect`.
 
 ## Quickstart
 
@@ -12,10 +21,11 @@ Godot Engine Tower Defense template project. Made with scalability in mind. Towe
   ```
 - Open in Godot Engine (v4.6.2+)
 - Run the Game
+- Read [docs](./docs) to add new turrets, bullets and enemies.
 
 ## Documentation
 
-Full documentation for this project
+Full documentation for this project is available in [./docs](./docs) directory
 
 # Contribution
 
